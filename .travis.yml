@@ -4,8 +4,13 @@ services:
   - docker
 
 install:
-  - docker build -t "fireco-update" .
-
+  - docker build -t lyoko17220/fireco-update .
 
 script:
-  - docker run "fireco-update"
+  - docker run lyoko17220/fireco-update
+
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD";
+    docker push lyoko17220/fireco-update;
+    fi
