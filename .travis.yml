@@ -1,0 +1,9 @@
+services:
+  - docker
+
+install:
+  - docker build -t "fireco-update" .
+
+
+script:
+  - docker run "fireco-update"
