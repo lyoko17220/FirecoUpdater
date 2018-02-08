@@ -19,6 +19,7 @@ RUN n latest
 
 ## Execution
 
+COPY app /app
 WORKDIR app/
 
 CMD npm install
