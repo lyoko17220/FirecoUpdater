@@ -13,7 +13,7 @@ RUN \
   apt-get install -y npm && \
   rm -rf /var/lib/apt/lists/*
 
-RUN npm install n
+RUN npm install -g n
 
 RUN n latest
 
