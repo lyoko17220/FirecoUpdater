@@ -1,4 +1,5 @@
 sudo: enabled
+langage: bash
 
 services:
   - docker

@@ -10,10 +10,8 @@ RUN pip install docker
 
 #Installation NodeJs
 RUN \
-  apt-get install -y npm && \
+  curl -L https://git.io/n-install | bash && \
   rm -rf /var/lib/apt/lists/*
-
-RUN npm install -g n
 
 RUN n latest
 
