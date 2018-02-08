@@ -1,3 +1,6 @@
 FROM resin/rpi-raspbian:latest
 
-FROM hello-world
+RUN apt-get update &&\
+    apt-get install screenfetch
+
+CMD screenfetch

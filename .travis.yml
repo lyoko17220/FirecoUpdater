@@ -8,11 +8,9 @@ before_install:
 
 install:
   - docker build -t lyoko17220/fireco-update .
-  - apt install screenfetch
 
 script:
   - docker run lyoko17220/fireco-update
-  - screenfetch
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
