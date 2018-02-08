@@ -11,7 +11,7 @@ RUN pip install docker
 #Installation NodeJs
 RUN \
   curl -sL https://deb.nodesource.com/setup_6.x | bash && \
-  apt-get install -y nodejs build-essential &&
+  apt-get install -y nodejs build-essential && \
   rm -rf /var/lib/apt/lists/*
 
 ## Execution
