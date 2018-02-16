@@ -16,4 +16,4 @@ FROM node:9
 COPY app /app
 WORKDIR app/
 
-CMD npm install
+CMD npm install -y && node app.js
