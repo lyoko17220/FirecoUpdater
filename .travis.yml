@@ -8,7 +8,7 @@ before_install:
   - docker run --privileged multiarch/qemu-user-static:register --reset
 
 script:
-  - docker build -t lyoko17220/fireco-updater .
+  - docker build -t lyoko17220/fireco-update .
 
 after_success:
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
