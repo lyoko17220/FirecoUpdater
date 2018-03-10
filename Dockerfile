@@ -14,6 +14,6 @@ FROM node:9
 ## Execution
 
 ADD app /app
-WORKDIR app/
+WORKDIR /app
 
 CMD npm install -y && node app.js
