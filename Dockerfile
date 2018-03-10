@@ -13,6 +13,7 @@ FROM node:9
 
 ## Execution
 
-VOLUME /data
+COPY app /app
+WORKDIR app/
 
 CMD npm install -y && node app.js
