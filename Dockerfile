@@ -17,3 +17,4 @@ ADD app /app
 WORKDIR /app
 
 CMD npm install -y && node app.js
+ENTRYPOINT ["/bin/bash"]
