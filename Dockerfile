@@ -1,8 +1,13 @@
 FROM resin/rpi-raspbian:latest
 FROM resin/raspberrypi3-node
 
-RUN [ "/usr/bin/qemu-arm-static", "apt-get", "update" ]
-RUN [ "/usr/bin/qemu-arm-static", "apt-get", "install", "python-pip" ]
+RUN [ "cross-build-start" ]
+
+RUN apt-get update
+RUN apt-get install python
+RUN pip install virtualenv
+
+RUN [ "cross-build-end" ]  
 
 # Installation Python
 #RUN \
