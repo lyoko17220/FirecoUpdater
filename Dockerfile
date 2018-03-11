@@ -1,15 +1,13 @@
 FROM resin/rpi-raspbian:latest
-
-RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
+FROM arm32v7/node:9
 
 # Installation Python
 RUN \
   apt-get update && \
-  apt-get install -y python python-dev python-pip python-virtualenv git gcc build-essential nodejs
+  apt-get install -y python python-dev python-pip python-virtualenv git
 
 # Install Docker SDK
 RUN pip install docker
-
 
 ## Execution
 
