@@ -16,7 +16,9 @@ RUN \
 ADD app /app
 WORKDIR /app
 
+RUN npm install -y
+
 RUN [ "cross-build-end" ]
 
-CMD npm install -y && node app.js
+CMD node app.js
 ENTRYPOINT ["/bin/bash"]
