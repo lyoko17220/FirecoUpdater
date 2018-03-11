@@ -3,8 +3,12 @@ FROM resin/armv7hf-debian
 RUN [ "cross-build-start" ]
 
 # Installation Python
+# Install Node.js (v8) [Manually]
+RUN wget https://nodejs.org/dist/v8.9.1/node-v8.9.1-linux-armv7l.tar.xz
+RUN tar -xvf node-v8.9.1-linux-armv7l.tar.xz
+RUN cd node-v8.9.1-linux-armv7l
+RUN sudo cp -R * /usr/local/
 
-RUN curl -L https://git.io/n-install | bash
 
 RUN \
   apt-get update && \
