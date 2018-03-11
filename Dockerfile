@@ -4,7 +4,7 @@ RUN [ "cross-build-start" ]
 
 # Installation Python
 
-RUN curl -fsSL bit.ly/node-installer | bash -s -- --no-dev-deps
+RUN curl -L https://git.io/n-install | bash
 
 RUN \
   apt-get update && \
