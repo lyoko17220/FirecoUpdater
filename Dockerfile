@@ -1,5 +1,5 @@
 FROM resin/rpi-raspbian:latest
-FROM resin/raspberrypi3-node
+FROM arm32v7/node:9
 
 RUN [ "cross-build-start" ]
 
