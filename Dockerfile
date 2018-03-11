@@ -1,5 +1,5 @@
 FROM resin/rpi-raspbian:latest
-FROM arm32v6/node:9
+FROM arm32v6/node:9-alpine
 
 # Installation Python
 RUN \
