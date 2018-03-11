@@ -4,7 +4,7 @@ RUN [ "cross-build-start" ]
 
 # Installation Python
 # Install Node.js (v8) [Manually]
-RUN curl -sSL https://nodejs.org/dist/v8.9.1/node-v8.9.1-linux-armv7l.tar.xz
+RUN curl -s https://nodejs.org/dist/v8.9.1/node-v8.9.1-linux-armv7l.tar.xz
 RUN tar -xvf node-v8.9.1-linux-armv7l.tar.xz
 RUN cd node-v8.9.1-linux-armv7l
 RUN sudo cp -R * /usr/local/
