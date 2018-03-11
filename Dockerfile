@@ -10,8 +10,6 @@ RUN \
 # Install Docker SDK
 RUN pip install docker
 
-# NodeJs
-RUN curl -L https://git.io/n-install | bash
 
 ## Execution
 
