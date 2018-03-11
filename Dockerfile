@@ -9,7 +9,7 @@ RUN \
 RUN pip install docker
 
 # NodeJs
-FROM node:9
+RUN curl -L https://git.io/n-install | bash
 
 ## Execution
 
