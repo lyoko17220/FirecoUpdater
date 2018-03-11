@@ -1,5 +1,4 @@
 FROM resin/rpi-raspbian:latest
-FROM arm32v7/node:9
 
 RUN [ "cross-build-start" ]
 
@@ -7,6 +6,8 @@ RUN [ "cross-build-start" ]
 RUN \
   apt-get update && \
   apt-get install -y python python-dev python-pip python-virtualenv git
+
+RUN curl -sL https://deb.nodesource.com/setup_9.x | sudo -E bash -
 
 # Install Docker SDK
 #RUN pip install docker
