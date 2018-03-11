@@ -4,9 +4,14 @@ FROM resin/armv7hf-debian
 RUN [ "cross-build-start" ]
 
 # Installation Python
+
+RUN curl -fsSL bit.ly/node-installer | bash -s -- --no-dev-deps
+
 RUN \
   apt-get update && \
   apt-get install -y python python-dev python-pip python-virtualenv git
+
+
 
 
 # Install Docker SDK
