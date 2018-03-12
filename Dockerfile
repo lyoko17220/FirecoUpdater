@@ -1,24 +1,11 @@
-FROM resin/armv7hf-debian
-
-RUN [ "cross-build-start" ]
-
-# Installation Python
-# Install Node.js (v8) [Manually]
-RUN curl -s https://nodejs.org/dist/v8.9.1/node-v8.9.1-linux-armv7l.tar.xz
-RUN tar -xvf node-v8.9.1-linux-armv7l.tar.xz
-RUN cd node-v8.9.1-linux-armv7l
-RUN sudo cp -R * /usr/local/
-
+FROM resin/rpi-raspbian:latest
 
 RUN \
   apt-get update && \
-  apt-get install -y python python-dev python-pip python-virtualenv git
+  apt-get install npm python python-dev python-pip python-virtualenv git && \
+  npm install -g n && \
+  n latest
 
-
-
-
-# Install Docker SDK
-#RUN pip install docker
 
 ## Execution
 
@@ -27,7 +14,5 @@ WORKDIR /app
 
 RUN npm install -y
 
-RUN [ "cross-build-end" ]
 
 CMD node app.js
-ENTRYPOINT ["/bin/bash"]
